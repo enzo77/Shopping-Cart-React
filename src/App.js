@@ -8,7 +8,7 @@ import { STORAGE_PRODUCTS_CART } from './utils/constants'
 
 function App() {
   const products = useFetch(urlApiProducts,null)
-  const [productsCart, setProductsCart] = useState([])
+  const [ productsCart, setProductsCart ] = useState([])
 
   useEffect(() => {
     getProductsCart()
@@ -36,7 +36,7 @@ function App() {
   
   return (
     <div >
-       <Topmenu productsCart={productsCart}/>
+       <Topmenu productsCart={productsCart} getProductsCart={getProductsCart}/>
        <Products products={products} addProductCart={addProductCart} />
        <ToastContainer 
        position="bottom-left"
