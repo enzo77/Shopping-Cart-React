@@ -20,6 +20,7 @@ function App() {
     if(idsProducts){
       const idsProductsSplit = idsProducts.split(',')
       setProductsCart(idsProductsSplit)
+    
      } else {
       setProductsCart([])
     }
@@ -36,7 +37,7 @@ function App() {
   
   return (
     <div >
-       <Topmenu productsCart={productsCart} getProductsCart={getProductsCart}/>
+       <Topmenu productsCart={productsCart} getProductsCart={getProductsCart} products={products}/>
        <Products products={products} addProductCart={addProductCart} />
        <ToastContainer 
        position="bottom-left"
